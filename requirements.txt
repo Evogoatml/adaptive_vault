@@ -1,11 +1,8 @@
 Resolve merge conflict in requirements.txt
-<<<<<<< HEAD
 Flask==2.3.3
 gunicorn==21.2.0
-=======
 flask
 gunicorn
->>>>>>> Update dependencies and sync for Render deploy
 requests==2.31.0
 colorama==0.4.6
 psutil==5.9.5
