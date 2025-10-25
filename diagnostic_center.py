@@ -16,8 +16,7 @@ for p in sys.path[:5]:
     print("  ", p)
 
 # --- Imports after sys.path fix ---
-from modules.governance.decision_governor import allow_external_calls
-from modules.public_api_connector import fetch_api_list
+from modules.diagnostics.external_services import ExternalIntelligenceService
 
 
 def banner():
@@ -51,12 +50,15 @@ def run_diagnostic_menu():
     section("Executing Task", "🚀", Fore.MAGENTA)
 
     if choice == "8":
-        if allow_external_calls("diagnostic"):
+        service = ExternalIntelligenceService()
+        try:
             print(Fore.CYAN + "[NET] Checking external intelligence feeds...")
-            fetch_api_list(force=True)
+            service.sync(force=True)
             print(Fore.GREEN + "✅ External data sync completed.")
-        else:
+        except PermissionError:
             print(Fore.RED + "🚫 Policy restriction: external data sync not permitted.")
+        except Exception as e:
+            print(Fore.RED + f"⚠️ External sync error: {e}")
 
     elif choice == "9":
         try:
