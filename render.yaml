@@ -10,7 +10,7 @@ services:
     buildCommand: |
       apt-get update && \
       apt-get install -y --no-install-recommends \
-        build-essential gcc libffi-dev libssl-dev python3-dev libxml2-dev libxslt1-dev ssdeep && \
+        build-essential gcc libffi-dev libssl-dev python3-dev libxml2-dev libxslt1-dev zlib1g-dev ssdeep libfuzzy-dev && \
       pip install --upgrade pip setuptools wheel && \
       pip install -r requirements.txt
 
