@@ -1,5 +1,6 @@
-requests
-colorama
+requests==2.31.0
+colorama==0.4.6
+psutil==5.9.5
 cryptography
 regex
 pymisp
