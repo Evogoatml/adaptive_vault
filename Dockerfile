@@ -1,5 +1,9 @@
-FROM python:3.11-slim
+FROM python:3.10-slim
+
 WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["python", "app.py"]
+COPY . /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 7860
+CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:7860", "app:app"]
