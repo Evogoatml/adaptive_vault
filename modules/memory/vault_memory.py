@@ -1,4 +1,4 @@
-import os, json, time
+import json, time
 from pathlib import Path
 
 MEMORY_PATH = Path.home() / "adaptive_vault" / "data" / "vault_memory.json"

@@ -4,7 +4,6 @@ Decision Governor — controls subsystem autonomy.
 """
 
 import os, configparser, time
-from modules.learning.learning_core import record
 
 POLICY_FILE = "mission.policy"
 

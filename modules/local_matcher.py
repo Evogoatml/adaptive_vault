@@ -1,5 +1,5 @@
 # local_matcher.py
-import sqlite3, hashlib, base64, json
+import sqlite3, hashlib, json
 try:
     import ssdeep
 except Exception:

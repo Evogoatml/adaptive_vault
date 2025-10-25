@@ -5,7 +5,7 @@ Analyzes efficiency reports and performance patterns to suggest improvements.
 Lightweight, capped logs, no auto-patching.
 """
 
-import os, json, statistics, time
+import os, json, time
 
 SUMMARY_FILE = "audit/efficiency_summary.json"
 REPORT_FILE  = "audit/recommendations.json"
