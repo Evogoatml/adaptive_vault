@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: adaptive-vault
+    env: python
+    region: oregon
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python adaptive_vault.py --demo
+    autoDeploy: true
+    plan: free
+    instanceType: starter
+    envVars:
+      - key: MODE
+        value: "production"
+      - key: CACHE_ENGINE
+        value: "memory"
