@@ -4,7 +4,18 @@ services:
     env: python
     region: oregon
     branch: main
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+  apt-get update && apt-get install -y \
+    build-essential \
+    libffi-dev \
+    libssl-dev \
+    libmagic-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+  pip install --upgrade pip
+  pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
     autoDeploy: true
     plan: free
