@@ -1,7 +1,7 @@
 # registry_cli.py
-import sqlite3, json, time, base64, argparse
+import sqlite3, json, time, argparse
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
-from cryptography.hazmat.primitives import serialization, hashes
+from cryptography.hazmat.primitives import serialization
 
 DB="registry.db"
 def init_db():

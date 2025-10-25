@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # modules/network_tunnel.py
 
-import os, time
+import os
 from pyngrok import ngrok
 
 TOKEN_FILE = os.path.expanduser("~/adaptive_vault/keys/ngrok_token.txt")

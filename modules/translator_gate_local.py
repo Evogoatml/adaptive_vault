@@ -1,5 +1,4 @@
 # translator_gate_local.py
-import json, base64
 from verify_manifest import verify_manifest  # earlier code
 from local_matcher import sha256_file, match_exact, match_ssdeep, match_rules
 from audit import append_entry  # your hash-chain

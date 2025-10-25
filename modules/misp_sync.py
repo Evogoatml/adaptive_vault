@@ -1,5 +1,5 @@
 # misp_sync.py
-import sqlite3, time, json, base64
+import sqlite3, time, json
 from pymisp import PyMISP
 
 # CONFIG: your MISP server + key

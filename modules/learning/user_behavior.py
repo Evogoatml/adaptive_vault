@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # modules/learning/user_behavior.py
-import os, json, time, statistics
+import os, json, time
 
 DATA_FILE = os.path.expanduser("~/adaptive_vault/data/user_behavior.json")
 

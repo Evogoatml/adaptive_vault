@@ -1,5 +1,5 @@
 # modules/data_bridge.py
-import requests, json
+import requests
 
 def get_live_data(url, timeout=10):
     try:
