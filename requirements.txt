@@ -1,11 +1,2 @@
-Flask==2.3.3
-gunicorn==21.2.0
-requests==2.31.0
-colorama==0.4.6
-psutil==5.9.5
-cryptography
-regex
-pymisp
-stix2
-taxii2-client
-ssdeep
+Flask
+gunicorn
