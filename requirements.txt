@@ -1,0 +1,9 @@
+requests
+colorama
+cryptography
+sqlite3-binary
+regex
+pymisp
+stix2
+taxii2-client
+ssdeep
