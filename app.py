@@ -1,10 +1,7 @@
 from flask import Flask, jsonify
 import threading
-<<<<<<< HEAD
-=======
 import time
 import requests
->>>>>>> Add Flask heartbeat for Render uptime
 import os
 
 app = Flask(__name__)
@@ -35,6 +32,11 @@ def heartbeat():
 def start_heartbeat():
     t = threading.Thread(target=heartbeat, daemon=True)
     t.start()
+
+@app.before_first_request
+def _start_heartbeat_once():
+    # Ensure heartbeat starts when running under Gunicorn/Render
+    start_heartbeat()
 
 if __name__ == "__main__":
     start_heartbeat()
