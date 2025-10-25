@@ -5,12 +5,10 @@ services:
     region: oregon
     branch: main
     buildCommand: pip install -r requirements.txt
-    startCommand: python adaptive_vault.py --demo
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
     autoDeploy: true
     plan: free
     instanceType: starter
     envVars:
       - key: MODE
         value: "production"
-      - key: CACHE_ENGINE
-        value: "memory"
